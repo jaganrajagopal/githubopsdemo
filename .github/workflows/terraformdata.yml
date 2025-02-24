@@ -4,15 +4,15 @@ on:
     branches:
       - main
       - develop 
-    paths :
-      - Terraformworkflow/**
+    # paths :
+    #   - Terraformworkflow/**
 
   pull_request:
     branches:
       - main
       - develop 
-    paths:
-    - Terraformworkflow/** 
+    # paths:
+    # - Terraformworkflow/** 
 
 jobs:
   terraform:
@@ -22,7 +22,7 @@ jobs:
       run:
         shell: bash
         # We keep Terraform files in the terraform directory.
-        working-directory: ./Terraformworkflow
+        #working-directory: ./Terraformworkflow
  
     steps:
       - name: Checkout the repository to the runner
