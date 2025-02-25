@@ -9,3 +9,14 @@ resource "aws_instance" "ec2_instance" {
     Name = "Terraform-EC2 "
   }
 }
+
+//managing of s3 bucket of state files
+terraform {
+  backend "s3" {
+    bucket         = "bucketsamplea"  # Replace with the S3 bucket name
+    key            = "githubterraform/terraform.tfstate"
+    region         = "us-east-1"
+    encrypt        = true
+    #dynamodb_table = "terraform-state-locks"
+  }
+}
