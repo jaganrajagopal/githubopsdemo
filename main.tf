@@ -14,7 +14,7 @@ resource "aws_instance" "ec2_instance" {
 terraform {
   backend "s3" {
     bucket         = "bucketsamplea"  # Replace with the S3 bucket name
-    key            = "githubterraform/terraform.tfstate"
+    key            = "githubterraform"
     region         = "us-east-1"
     encrypt        = true
     #dynamodb_table = "terraform-state-locks"
